@@ -104,7 +104,7 @@ func CreateFile(url, token string) error {
 
 	path := configFilePath()
 
-	os.Mkdir(filepath.Dir(path), 0755)
+	_ = os.Mkdir(filepath.Dir(path), 0755)
 	return os.WriteFile(path, b, 0600)
 }
 

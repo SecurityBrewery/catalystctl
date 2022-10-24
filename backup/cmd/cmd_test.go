@@ -21,5 +21,5 @@ func testFile(t *testing.T, s string) (*os.File, error) {
 	}
 
 	_, err = f.Write(b)
-	return f, nil
+	return f, err
 }

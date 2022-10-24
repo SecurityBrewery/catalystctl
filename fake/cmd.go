@@ -85,7 +85,7 @@ func (g *Generator) dashboardDummyData() error {
 func (g *Generator) userDummyData() error {
 	for _, user := range users {
 		log.Println("create user ", user.ID)
-		g.client.PostJSON("/users", nil, user)
+		_, _ = g.client.PostJSON("/users", nil, user)
 	}
 	return nil
 }
